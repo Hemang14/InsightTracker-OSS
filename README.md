@@ -39,8 +39,6 @@ OSS Dashboard is a web application designed to track and visualize open-source p
 - **Frontend**: React.js, Material-UI
 - **Charts**: Recharts
 - **Routing**: React Router
-- **Backend (Future Implementation)**: Node.js, Express
-- **Database (Future Implementation)**: MongoDB or PostgreSQL
 
 ## ⚡ Installation Guide
 
@@ -52,33 +50,6 @@ npm install
 npm install react-router-dom @mui/material @mui/icons-material @mui/lab @mui/x-date-pickers @emotion/react @emotion/styled recharts @date-io/date-fns
 npm start
 ```
-
----
-
-# 📌 NOTES
-
-### **🎨 UI Components**
-- **Dashboard**: Displays all projects with color-coded status labels.
-- **Click a project** to see **detailed insights**.
-- **Project Details**: Shows real-time project statistics.
-- **Displays interactive time-series graphs**.
-
-### **📊 Example Project Data**
-- The app currently uses **mock data**.
-- Future versions will fetch **real data from GitHub APIs**.
-
-### **🎯 Future Enhancements**
-- ✅ **Backend API Integration** (GitHub API for real-time tracking).
-- ✅ **User Authentication** (Login, user-specific dashboards).
-- ✅ **Customizable Reports** (Download project insights).
-
-### **🤝 Contribution Guide**
-1. **Fork the repository**.
-2. **Create a new branch**: `git checkout -b feature-branch`
-3. **Commit changes**: `git commit -m "Add feature"`
-4. **Push to GitHub**: `git push origin feature-branch`
-5. **Create a Pull Request**.
-
 
 ---
 
