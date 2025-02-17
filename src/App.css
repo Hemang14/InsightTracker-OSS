@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+}
+/* 
+.App {
+  min-height: 100vh;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  text-align: center; /* Assuming you want to keep text center-aligned */
+/* } */
+
+.App {
+  min-height: 100vh; /* Ensures at least full viewport height coverage */
+  background-color: #263238; /* Using the specified blue-grey color */
+  width: 100vw; /* Ensures full viewport width coverage */
+  text-align: center;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Ensure no unnecessary backgrounds on elements inside .App */
+.App-header, .App-logo, .App-link {
+  background: transparent;
+}
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #263238; /* Ensure the background is consistent */
+}
+
+/* Apply Palatino font globally */
+body {
+  font-family: 'Palatino', sans-serif;
+  background-color: #263238; /* Keeps the dark theme */
+  color: #fff; /* Ensures text remains visible */
+  margin: 0;
+  padding: 0;
+}
+
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /*Ensures it stays in the background */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#root .big-chip {
+    font-size: 1.8rem;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+}
