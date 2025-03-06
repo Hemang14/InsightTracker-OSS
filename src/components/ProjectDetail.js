@@ -4,6 +4,89 @@ import { Paper, Typography, Chip, Box, MenuItem, Select } from '@mui/material';
 import TimeSeriesGraph from './TimeSeriesGraph'; // Assuming you have this component for rendering graphs
 import '../App.css';
 
+const GITHUB_API_URL = "https://api.github.com";
+// const GITHUB_TOKEN = "ADD_GITHUB_TOKEN_HERE";
+
+// Function to fetch issue count based on state and date range
+async function fetchIssuesCount(owner, repo, dateFilter) {
+  const url = `${GITHUB_API_URL}/search/issues?q=repo:${owner}/${repo}+is:issue+${dateFilter}`;
+
+  try {
+    console.log(`Fetching: ${url}`);
+    const response = await fetch(url, { headers: HEADERS });
+    if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+    
+    const data = await response.json();
+    return data.total_count || 0;
+  } catch (error) {
+    console.error(`⚠️ Error fetching issues for ${dateFilter}: ${error}`);
+    return 0;
+  }
+}
+
+// Function to fetch commits, PRs, and issues (monthly)
+async function fetchProjectMetrics(owner, repo) {
+  const months = 12;
+  let monthlyData = [];
+
+  for (let i = 1; i <= months; i++) {
+    const startDate = new Date();
+    startDate.setMonth(startDate.getMonth() - i);
+    startDate.setDate(1);
+
+    const endDate = new Date(startDate);
+    endDate.setMonth(startDate.getMonth() + 1);
+    endDate.setDate(0);
+
+    const dateFilter = `created:${startDate.toISOString().split("T")[0]}..${endDate.toISOString().split("T")[0]}`;
+
+    const commits = await fetchIssuesCount(owner, repo, dateFilter.replace("created", "commits"));
+    const pullRequests = await fetchIssuesCount(owner, repo, dateFilter.replace("created", "is:pr"));
+    const issues = await fetchIssuesCount(owner, repo, dateFilter);
+
+    monthlyData.push({
+      time: startDate.toLocaleString("default", { month: "short" }),
+      commits,
+      pullRequests,
+      issues
+    });
+
+    await new Promise(resolve => setTimeout(resolve, 5000)); // Avoid rate limits
+  }
+
+  return monthlyData.reverse();
+}
+
+// Replace hardcoded projectMetrics with dynamic data
+async function loadProjectMetrics() {
+  // change this to support multiple projects
+  const REPO_OWNER = "eclipse-platform";
+  const REPO_NAME = "eclipse.platform.ui";
+
+  const monthlyMetrics = await fetchProjectMetrics(REPO_OWNER, REPO_NAME);
+
+  const projectMetrics = {
+    weekly: [
+      { time: "Week 1", commits: 20, pullRequests: 5, issues: 10 },
+      { time: "Week 2", commits: 30, pullRequests: 8, issues: 7 },
+      { time: "Week 3", commits: 25, pullRequests: 10, issues: 12 },
+      { time: "Week 4", commits: 20, pullRequests: 12, issues: 19 },
+      { time: "Week 4", commits: 30, pullRequests: 16, issues: 2 },
+      { time: "Week 4", commits: 10, pullRequests: 18, issues: 12 },
+      { time: "Week 4", commits: 25, pullRequests: 7, issues: 5 }
+    ], // Weekly data can be implemented later
+    monthly: monthlyMetrics,
+    yearly: [
+      { time: "2022", commits: 1200, pullRequests: 300, issues: 500 },
+      { time: "2023", commits: 1400, pullRequests: 320, issues: 450 },
+      { time: "2024", commits: 1600, pullRequests: 350, issues: 400 }
+    ]
+  };
+
+  console.log("🔹 Loaded Project Metrics:", projectMetrics);
+  return projectMetrics;
+}
+
 const ProjectDetail = () => {
   const { id } = useParams();
   const location = useLocation();
@@ -33,6 +116,8 @@ const ProjectDetail = () => {
       { time: "2024", commits: 1600, pullRequests: 350, issues: 400 }
     ]
   };
+
+  // const projectMetrics = loadProjectMetrics();
 
 
     // Dummy historical data mapping months to labels
