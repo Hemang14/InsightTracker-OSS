@@ -60,8 +60,8 @@ async function fetchProjectMetrics(owner, repo) {
 // Replace hardcoded projectMetrics with dynamic data
 async function loadProjectMetrics() {
   // change this to support multiple projects
-  const REPO_OWNER = "eclipse-platform";
-  const REPO_NAME = "eclipse.platform.ui";
+  const REPO_OWNER = "apache";
+  const REPO_NAME = "tapestry3";
 
   const monthlyMetrics = await fetchProjectMetrics(REPO_OWNER, REPO_NAME);
 
