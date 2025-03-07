@@ -8,7 +8,7 @@ const GITHUB_API_URL = "https://api.github.com";
 const GITHUB_TOKEN = ""; // add github token here
 
 // Headers for API Authentication
-const HEADERS = GITHUB_TOKENgit 
+const HEADERS = GITHUB_TOKEN
   ? { Authorization: `token ${GITHUB_TOKEN}` }
   : {};
 
