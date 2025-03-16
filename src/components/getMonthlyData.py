@@ -144,8 +144,7 @@ def assign_label(score):
         return 'Data Insufficient'
 
 # Function to collect data for a given month
-def collect_metrics_for_month(month):
-    repos = get_repositories()
+def collect_metrics_for_month(month, repos):
     results = {}
 
     for repo in repos:
@@ -180,8 +179,9 @@ if __name__ == "__main__":
 
     print(f"Fetching data for {month} and {prev_month}...")
 
-    current_data = collect_metrics_for_month(month)
-    previous_data = collect_metrics_for_month(prev_month)
+    repos = get_repositories()
+    current_data = collect_metrics_for_month(month, repos)
+    previous_data = collect_metrics_for_month(prev_month, repos)
 
     print("\nFinal Report:\n")
     for repo, metrics in current_data.items():
