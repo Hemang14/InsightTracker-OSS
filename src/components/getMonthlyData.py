@@ -3,7 +3,7 @@ import datetime
 import os
 
 # GitHub Token for Authentication
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "") # Add GitHub token here
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "ADD_GITHUB_TOKEN_HERE") # Add GitHub token here
 
 # GitHub API Headers with Authentication
 HEADERS = {
@@ -16,7 +16,7 @@ BASE_URL = "https://api.github.com"
 
 # Function to get repositories
 def get_repositories():
-    url = f"{BASE_URL}/orgs/apache/repos?per_page=100"
+    url = f"{BASE_URL}/orgs/apache/repos?per_page=100&sort=pushed"
     response = requests.get(url, headers=HEADERS)
     return response.json() if response.status_code == 200 else []
 
