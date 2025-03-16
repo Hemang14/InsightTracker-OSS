@@ -3,7 +3,7 @@ import datetime
 import os
 
 # GitHub Token for Authentication
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "") # Add GitHub token here
 
 # GitHub API Headers with Authentication
 HEADERS = {
@@ -16,48 +16,52 @@ BASE_URL = "https://api.github.com"
 
 # Function to get repositories
 def get_repositories():
-    url = f"{BASE_URL}/orgs/apache/repos?per_page=25"
+    url = f"{BASE_URL}/orgs/apache/repos?per_page=100"
     response = requests.get(url, headers=HEADERS)
     return response.json() if response.status_code == 200 else []
 
-# Function to fetch contributors per month
-def get_contributors(repo_full_name, month):
-    url = f"{BASE_URL}/repos/{repo_full_name}/contributors"
-    response = requests.get(url, headers=HEADERS)
+# Function to fetch commits per month
+def get_commits(repo_full_name, month):
+    split_year, split_month = map(int, month.split("-"))  # Extract year and month from string
+    start_date = datetime.date(split_year, split_month, 1)  # First day of the month
+    if split_month == 12:
+        end_date = datetime.date(split_year + 1, 1, 1) - datetime.timedelta(days=1)  # Dec 31st
+    else:
+        end_date = datetime.date(split_year, split_month + 1, 1) - datetime.timedelta(days=1)  # Last day of month
+    pr_url = f"{BASE_URL}/repos/{repo_full_name}/commits?since={start_date}&until={end_date}&per_page=100"
+    response = requests.get(pr_url, headers=HEADERS)
     return len(response.json()) if response.status_code == 200 else 0
 
 # Function to fetch pull request data
 def get_pull_requests(repo_full_name, month):
-    pr_url = f"{BASE_URL}/repos/{repo_full_name}/pulls?state=all&per_page=25"
+    split_year, split_month = map(int, month.split("-"))  # Extract year and month from string
+    start_date = datetime.date(split_year, split_month, 1)  # First day of the month
+    if split_month == 12:
+        end_date = datetime.date(split_year + 1, 1, 1) - datetime.timedelta(days=1)  # Dec 31st
+    else:
+        end_date = datetime.date(split_year, split_month + 1, 1) - datetime.timedelta(days=1)  # Last day of month
+    pr_url = f"{BASE_URL}/search/issues?q=repo:{repo_full_name}+is:pr+closed:{start_date}..{end_date}"
     response = requests.get(pr_url, headers=HEADERS)
-    if response.status_code != 200:
-        return 0, 0
-
-    prs = response.json()
-    opened, closed = 0, 0
-    for pr in prs:
-        created_at = pr["created_at"][:7]  # Extract YYYY-MM
-        closed_at = pr["closed_at"][:7] if pr["closed_at"] else None
-        if created_at == month:
-            opened += 1
-        if closed_at == month:
-            closed += 1
-
-    return opened, closed
+    data = response.json()
+    return data["total_count"] if response.status_code == 200 else 0
+    
 
 # Function to fetch issues resolved per month
 def get_issues_resolved(repo_full_name, month):
-    issues_url = f"{BASE_URL}/repos/{repo_full_name}/issues?state=closed&per_page=25"
-    response = requests.get(issues_url, headers=HEADERS)
-    if response.status_code != 200:
-        return 0
-
-    issues = response.json()
-    return sum(1 for issue in issues if "pull_request" not in issue and issue["closed_at"][:7] == month)
+    split_year, split_month = map(int, month.split("-"))  # Extract year and month from string
+    start_date = datetime.date(split_year, split_month, 1)  # First day of the month
+    if split_month == 12:
+        end_date = datetime.date(split_year + 1, 1, 1) - datetime.timedelta(days=1)  # Dec 31st
+    else:
+        end_date = datetime.date(split_year, split_month + 1, 1) - datetime.timedelta(days=1)  # Last day of month
+    issue_url = f"{BASE_URL}/search/issues?q=repo:{repo_full_name}+is:issue+closed:{start_date}..{end_date}"
+    response = requests.get(issue_url, headers=HEADERS)
+    data = response.json()
+    return data["total_count"] if response.status_code == 200 else 0
 
 # Function to fetch completed milestones per month
 def get_milestones_completed(repo_full_name, month):
-    milestones_url = f"{BASE_URL}/repos/{repo_full_name}/milestones?state=closed"
+    milestones_url = f"{BASE_URL}/repos/{repo_full_name}/milestones?state=closed&per_page=100"
     response = requests.get(milestones_url, headers=HEADERS)
     if response.status_code != 200:
         return 0
@@ -67,8 +71,14 @@ def get_milestones_completed(repo_full_name, month):
 
 # Function to fetch code churn per month (lines added vs removed)
 def get_code_churn(repo_full_name, month):
-    commits_url = f"{BASE_URL}/repos/{repo_full_name}/commits?per_page=25"
-    response = requests.get(commits_url, headers=HEADERS)
+    split_year, split_month = map(int, month.split("-"))  # Extract year and month from string
+    start_date = datetime.date(split_year, split_month, 1)  # First day of the month
+    if split_month == 12:
+        end_date = datetime.date(split_year + 1, 1, 1) - datetime.timedelta(days=1)  # Dec 31st
+    else:
+        end_date = datetime.date(split_year, split_month + 1, 1) - datetime.timedelta(days=1)  # Last day of month
+    commit_url = f"{BASE_URL}/repos/{repo_full_name}/commits?since={start_date}&until={end_date}&per_page=100"
+    response = requests.get(commit_url, headers=HEADERS)
     if response.status_code != 200:
         return 0, 0
 
@@ -88,7 +98,9 @@ def get_code_churn(repo_full_name, month):
 
 # Function to estimate mails per month from PR discussions and commit messages
 def get_mails_per_month(repo_full_name, month):
-    comments_url = f"{BASE_URL}/repos/{repo_full_name}/issues/comments?per_page=25"
+    split_year, split_month = map(int, month.split("-"))  # Extract year and month from string
+    start_date = datetime.date(split_year, split_month, 1)  # First day of the month
+    comments_url = f"{BASE_URL}/repos/{repo_full_name}/issues/comments?since={start_date}&per_page=100"
     response = requests.get(comments_url, headers=HEADERS)
     if response.status_code != 200:
         return 0
@@ -99,7 +111,7 @@ def get_mails_per_month(repo_full_name, month):
 # Function to calculate the composite score
 def calculate_composite_score(data):
     weights = {
-        'contributors': 20,
+        'commits': 20,
         'pull_requests': 15,
         'issues_resolved': 20,
         'milestones': 20,
@@ -116,20 +128,18 @@ def calculate_composite_score(data):
 
 # Function to assign labels based on the composite score
 def assign_label(score):
-    if score > 0.75:
+    if score > 0.30:
         return 'Accelerating'
-    elif 0.50 < score <= 0.75:
-        return 'Consolidating'
-    elif 0.40 < score <= 0.50:
-        return 'Maintaining'
-    elif 0.30 < score <= 0.40:
-        return 'Plateauing'
     elif 0.10 < score <= 0.30:
+        return 'Consolidating'
+    elif 0.00 < score <= 0.10:
+        return 'Maintaining'
+    elif -0.10 < score <= 0.00:
+        return 'Plateauing'
+    elif -0.30 < score <= -0.10:
         return 'Declining'
-    elif score <= 0.10:
+    elif score <= -0.30:
         return 'Crisis'
-    elif score < -0.15:
-        return 'Reviving'
     else:
         return 'Data Insufficient'
 
@@ -142,16 +152,16 @@ def collect_metrics_for_month(month):
         repo_name = repo["full_name"]
         print(f"Processing {repo_name} for {month}...")
 
-        contributors = get_contributors(repo_name, month)
-        pr_opened, pr_closed = get_pull_requests(repo_name, month)
+        commits = get_commits(repo_name, month)
+        pr_closed = get_pull_requests(repo_name, month)
         issues_resolved = get_issues_resolved(repo_name, month)
         milestones_completed = get_milestones_completed(repo_name, month)
         lines_added, lines_removed = get_code_churn(repo_name, month)
         mails = get_mails_per_month(repo_name, month)
 
         results[repo_name] = {
-            'contributors': contributors,
-            'pull_requests': pr_opened,
+            'commits': commits,
+            'pull_requests': pr_closed,
             'issues_resolved': issues_resolved,
             'milestones': milestones_completed,
             'code_churn': lines_added - lines_removed,
