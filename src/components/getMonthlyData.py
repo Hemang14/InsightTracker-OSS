@@ -1,10 +1,9 @@
 import requests
 import datetime
 import os
-from collections import defaultdict
 
-# Set your GitHub token here (or load it from an environment variable)
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "Enter github token here")
+# GitHub Token for Authentication
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 
 # GitHub API Headers with Authentication
 HEADERS = {
@@ -17,7 +16,7 @@ BASE_URL = "https://api.github.com"
 
 # Function to get repositories
 def get_repositories():
-    url = f"{BASE_URL}/orgs/apache/repos?per_page=5"
+    url = f"{BASE_URL}/orgs/apache/repos?per_page=25"
     response = requests.get(url, headers=HEADERS)
     return response.json() if response.status_code == 200 else []
 
@@ -29,7 +28,7 @@ def get_contributors(repo_full_name, month):
 
 # Function to fetch pull request data
 def get_pull_requests(repo_full_name, month):
-    pr_url = f"{BASE_URL}/repos/{repo_full_name}/pulls?state=all&per_page=100"
+    pr_url = f"{BASE_URL}/repos/{repo_full_name}/pulls?state=all&per_page=25"
     response = requests.get(pr_url, headers=HEADERS)
     if response.status_code != 200:
         return 0, 0
@@ -48,7 +47,7 @@ def get_pull_requests(repo_full_name, month):
 
 # Function to fetch issues resolved per month
 def get_issues_resolved(repo_full_name, month):
-    issues_url = f"{BASE_URL}/repos/{repo_full_name}/issues?state=closed&per_page=100"
+    issues_url = f"{BASE_URL}/repos/{repo_full_name}/issues?state=closed&per_page=25"
     response = requests.get(issues_url, headers=HEADERS)
     if response.status_code != 200:
         return 0
@@ -68,7 +67,7 @@ def get_milestones_completed(repo_full_name, month):
 
 # Function to fetch code churn per month (lines added vs removed)
 def get_code_churn(repo_full_name, month):
-    commits_url = f"{BASE_URL}/repos/{repo_full_name}/commits?per_page=100"
+    commits_url = f"{BASE_URL}/repos/{repo_full_name}/commits?per_page=25"
     response = requests.get(commits_url, headers=HEADERS)
     if response.status_code != 200:
         return 0, 0
@@ -89,13 +88,50 @@ def get_code_churn(repo_full_name, month):
 
 # Function to estimate mails per month from PR discussions and commit messages
 def get_mails_per_month(repo_full_name, month):
-    comments_url = f"{BASE_URL}/repos/{repo_full_name}/issues/comments?per_page=100"
+    comments_url = f"{BASE_URL}/repos/{repo_full_name}/issues/comments?per_page=25"
     response = requests.get(comments_url, headers=HEADERS)
     if response.status_code != 200:
         return 0
 
     comments = response.json()
     return sum(1 for comment in comments if comment["created_at"][:7] == month)
+
+# Function to calculate the composite score
+def calculate_composite_score(data):
+    weights = {
+        'contributors': 20,
+        'pull_requests': 15,
+        'issues_resolved': 20,
+        'milestones': 20,
+        'code_churn': 10,
+        'community_engagement': 15
+    }
+    
+    score = 0
+    for metric, weight in weights.items():
+        percent_change = (data[metric]['current'] - data[metric]['previous']) / data[metric]['previous'] if data[metric]['previous'] > 0 else 0
+        score += percent_change * (weight / 100)
+    
+    return score
+
+# Function to assign labels based on the composite score
+def assign_label(score):
+    if score > 0.75:
+        return 'Accelerating'
+    elif 0.50 < score <= 0.75:
+        return 'Consolidating'
+    elif 0.40 < score <= 0.50:
+        return 'Maintaining'
+    elif 0.30 < score <= 0.40:
+        return 'Plateauing'
+    elif 0.10 < score <= 0.30:
+        return 'Declining'
+    elif score <= 0.10:
+        return 'Crisis'
+    elif score < -0.15:
+        return 'Reviving'
+    else:
+        return 'Data Insufficient'
 
 # Function to collect data for a given month
 def collect_metrics_for_month(month):
@@ -114,40 +150,37 @@ def collect_metrics_for_month(month):
         mails = get_mails_per_month(repo_name, month)
 
         results[repo_name] = {
-            "Contributors": contributors,
-            "PRs Opened": pr_opened,
-            "PRs Closed": pr_closed,
-            "Issues Resolved": issues_resolved,
-            "Milestones Completed": milestones_completed,
-            "Code Churn (Added)": lines_added,
-            "Code Churn (Removed)": lines_removed,
-            "Emails": mails,
+            'contributors': contributors,
+            'pull_requests': pr_opened,
+            'issues_resolved': issues_resolved,
+            'milestones': milestones_completed,
+            'code_churn': lines_added - lines_removed,
+            'community_engagement': mails
         }
 
     return results
 
-# Run script for a specific month and previous month
+# Run script for a specific month and calculate the composite score
 if __name__ == "__main__":
     month = input("Enter month (YYYY-MM): ")
 
     # Compute the previous month
     year, month_num = map(int, month.split("-"))
-    if month_num == 1:
-        prev_month = f"{year - 1}-12"
-    else:
-        prev_month = f"{year}-{month_num - 1:02d}"
+    prev_month = f"{year - 1}-12" if month_num == 1 else f"{year}-{month_num - 1:02d}"
 
     print(f"Fetching data for {month} and {prev_month}...")
 
     current_data = collect_metrics_for_month(month)
     previous_data = collect_metrics_for_month(prev_month)
 
-    # Print results in a structured format
-    print("\nComparison of Metrics (Current Month vs Previous Month):\n")
-    print(f"{'Repository':<30}{'Metric':<25}{month:<12}{prev_month:<12}")
-
+    print("\nFinal Report:\n")
     for repo, metrics in current_data.items():
-        print("-" * 80)
-        for metric, value in metrics.items():
-            prev_value = previous_data.get(repo, {}).get(metric, 0)
-            print(f"{repo:<30}{metric:<25}{value:<12}{prev_value:<12}")
+        previous_metrics = previous_data.get(repo, {metric: 0 for metric in metrics})
+
+        data = {metric: {'current': metrics[metric], 'previous': previous_metrics.get(metric, 0)}
+                for metric in metrics}
+
+        score = calculate_composite_score(data)
+        label = assign_label(score)
+
+        print(f"{repo} - Score: {score:.2f}, Label: {label}")
