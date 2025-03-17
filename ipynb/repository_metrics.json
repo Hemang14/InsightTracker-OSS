@@ -1,0 +1,3928 @@
+[
+    {
+        "name": "tashi",
+        "Github_link": "https://github.com/apache/tashi",
+        "start_date": "2012-07-11",
+        "monthly_metrics": [
+            {
+                "month": "1612",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1701",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1702",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1703",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1704",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1705",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1706",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1707",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1708",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1709",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1710",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1711",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1712",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1801",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1802",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1803",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1804",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1805",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1806",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1807",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1808",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1809",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1810",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1811",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "chainsaw",
+        "Github_link": "https://github.com/apache/chainsaw",
+        "start_date": "2009-05-20",
+        "monthly_metrics": [
+            {
+                "month": "2007",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2008",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2009",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2010",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2011",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2012",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2101",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2102",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2103",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2104",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2105",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2106",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2107",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2108",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2109",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2110",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2111",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2112",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2201",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2202",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2203",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2204",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2205",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2206",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            }
+        ]
+    },
+    {
+        "name": "photark",
+        "Github_link": "https://github.com/apache/photark",
+        "start_date": "2010-08-12",
+        "monthly_metrics": [
+            {
+                "month": "2102",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2103",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2104",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2105",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2106",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2107",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2108",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2109",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2110",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2111",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2112",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2201",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2202",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2203",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2204",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2205",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2206",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2207",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 5
+            },
+            {
+                "month": "2208",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2209",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2210",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2211",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2212",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2301",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "kalumet",
+        "Github_link": "https://github.com/apache/kalumet",
+        "start_date": "2011-11-06",
+        "monthly_metrics": [
+            {
+                "month": "2104",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2105",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2106",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2107",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2108",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2109",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2110",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2111",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2112",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2201",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2202",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2203",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2204",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2205",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2206",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2207",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2208",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2209",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2210",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2211",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2212",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2301",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2302",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2303",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "sirona",
+        "Github_link": "https://github.com/apache/sirona",
+        "start_date": "2013-10-24",
+        "monthly_metrics": [
+            {
+                "month": "2204",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2205",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2206",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2207",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2208",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2209",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2210",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2211",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2212",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2301",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2302",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2303",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2304",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2305",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2306",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2307",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2308",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2309",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2310",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2311",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2312",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2401",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2402",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2403",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            }
+        ]
+    },
+    {
+        "name": "incubator-myriad",
+        "Github_link": "https://github.com/apache/incubator-myriad",
+        "start_date": "2015-04-04",
+        "monthly_metrics": [
+            {
+                "month": "2107",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2108",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2109",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2110",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2111",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2112",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2201",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2202",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2203",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2204",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2205",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2206",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2207",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2208",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2209",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2210",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2211",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2212",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2301",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2302",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2303",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2304",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 4
+            },
+            {
+                "month": "2305",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2306",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "incubator-milagro",
+        "Github_link": "https://github.com/apache/incubator-milagro",
+        "start_date": "2016-02-05",
+        "monthly_metrics": [
+            {
+                "month": "2203",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2204",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2205",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2206",
+                "commits": 8,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2207",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2208",
+                "commits": 9,
+                "issues": 0,
+                "pulls": 10
+            },
+            {
+                "month": "2209",
+                "commits": 14,
+                "issues": 0,
+                "pulls": 5
+            },
+            {
+                "month": "2210",
+                "commits": 0,
+                "issues": 3,
+                "pulls": 0
+            },
+            {
+                "month": "2211",
+                "commits": 10,
+                "issues": 3,
+                "pulls": 4
+            },
+            {
+                "month": "2212",
+                "commits": 17,
+                "issues": 3,
+                "pulls": 2
+            },
+            {
+                "month": "2301",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2302",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2303",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2304",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2305",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2306",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2307",
+                "commits": 0,
+                "issues": 1,
+                "pulls": 0
+            },
+            {
+                "month": "2308",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2309",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2310",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2311",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2312",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2401",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2402",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "odftoolkit",
+        "Github_link": "https://github.com/apache/odftoolkit",
+        "start_date": "2012-07-28",
+        "monthly_metrics": [
+            {
+                "month": "1610",
+                "commits": 2,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1611",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1612",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1701",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1702",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1703",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1704",
+                "commits": 3,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1705",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1706",
+                "commits": 2,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1707",
+                "commits": 2,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1708",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1709",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1710",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1711",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1712",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1801",
+                "commits": 2,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "1802",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1803",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1804",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "1805",
+                "commits": 3,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1806",
+                "commits": 2,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1807",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1808",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1809",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "npanday",
+        "Github_link": "https://github.com/apache/npanday",
+        "start_date": "2010-09-18",
+        "monthly_metrics": [
+            {
+                "month": "2109",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2110",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2111",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2112",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2201",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2202",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2203",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2204",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2205",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2206",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2207",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2208",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2209",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2210",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2211",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2212",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2301",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2302",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2303",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2304",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 6
+            },
+            {
+                "month": "2305",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2306",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2307",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2308",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "archiva",
+        "Github_link": "https://github.com/apache/archiva",
+        "start_date": "2014-04-10",
+        "monthly_metrics": [
+            {
+                "month": "2109",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2110",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2111",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2112",
+                "commits": 18,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2201",
+                "commits": 16,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2202",
+                "commits": 6,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2203",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2204",
+                "commits": 20,
+                "issues": 0,
+                "pulls": 23
+            },
+            {
+                "month": "2205",
+                "commits": 6,
+                "issues": 0,
+                "pulls": 24
+            },
+            {
+                "month": "2206",
+                "commits": 12,
+                "issues": 0,
+                "pulls": 9
+            },
+            {
+                "month": "2207",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 4
+            },
+            {
+                "month": "2208",
+                "commits": 9,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2209",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2210",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2211",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2212",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 5
+            },
+            {
+                "month": "2301",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2302",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2303",
+                "commits": 2,
+                "issues": 0,
+                "pulls": 12
+            },
+            {
+                "month": "2304",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2305",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2306",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2307",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2308",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            }
+        ]
+    },
+    {
+        "name": "incubator-datalab",
+        "Github_link": "https://github.com/apache/incubator-datalab",
+        "start_date": "2019-01-11",
+        "monthly_metrics": [
+            {
+                "month": "2110",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 30
+            },
+            {
+                "month": "2111",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 50
+            },
+            {
+                "month": "2112",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 15
+            },
+            {
+                "month": "2201",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 20
+            },
+            {
+                "month": "2202",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 42
+            },
+            {
+                "month": "2203",
+                "commits": 30,
+                "issues": 1,
+                "pulls": 37
+            },
+            {
+                "month": "2204",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 32
+            },
+            {
+                "month": "2205",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 27
+            },
+            {
+                "month": "2206",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 36
+            },
+            {
+                "month": "2207",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 53
+            },
+            {
+                "month": "2208",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 83
+            },
+            {
+                "month": "2209",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 53
+            },
+            {
+                "month": "2210",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 26
+            },
+            {
+                "month": "2211",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 18
+            },
+            {
+                "month": "2212",
+                "commits": 5,
+                "issues": 0,
+                "pulls": 7
+            },
+            {
+                "month": "2301",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2302",
+                "commits": 18,
+                "issues": 1,
+                "pulls": 7
+            },
+            {
+                "month": "2303",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2304",
+                "commits": 0,
+                "issues": 1,
+                "pulls": 0
+            },
+            {
+                "month": "2305",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2306",
+                "commits": 4,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2307",
+                "commits": 0,
+                "issues": 1,
+                "pulls": 2
+            },
+            {
+                "month": "2308",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2309",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            }
+        ]
+    },
+    {
+        "name": "incubator-weex",
+        "Github_link": "https://github.com/apache/incubator-weex",
+        "start_date": "2017-01-06",
+        "monthly_metrics": [
+            {
+                "month": "1905",
+                "commits": 30,
+                "issues": 51,
+                "pulls": 66
+            },
+            {
+                "month": "1906",
+                "commits": 30,
+                "issues": 66,
+                "pulls": 62
+            },
+            {
+                "month": "1907",
+                "commits": 30,
+                "issues": 56,
+                "pulls": 93
+            },
+            {
+                "month": "1908",
+                "commits": 30,
+                "issues": 48,
+                "pulls": 54
+            },
+            {
+                "month": "1909",
+                "commits": 30,
+                "issues": 24,
+                "pulls": 54
+            },
+            {
+                "month": "1910",
+                "commits": 30,
+                "issues": 19,
+                "pulls": 36
+            },
+            {
+                "month": "1911",
+                "commits": 30,
+                "issues": 29,
+                "pulls": 21
+            },
+            {
+                "month": "1912",
+                "commits": 30,
+                "issues": 31,
+                "pulls": 23
+            },
+            {
+                "month": "2001",
+                "commits": 2,
+                "issues": 25,
+                "pulls": 1
+            },
+            {
+                "month": "2002",
+                "commits": 4,
+                "issues": 19,
+                "pulls": 3
+            },
+            {
+                "month": "2003",
+                "commits": 8,
+                "issues": 16,
+                "pulls": 7
+            },
+            {
+                "month": "2004",
+                "commits": 4,
+                "issues": 22,
+                "pulls": 2
+            },
+            {
+                "month": "2005",
+                "commits": 0,
+                "issues": 13,
+                "pulls": 0
+            },
+            {
+                "month": "2006",
+                "commits": 8,
+                "issues": 13,
+                "pulls": 5
+            },
+            {
+                "month": "2007",
+                "commits": 0,
+                "issues": 8,
+                "pulls": 4
+            },
+            {
+                "month": "2008",
+                "commits": 8,
+                "issues": 11,
+                "pulls": 5
+            },
+            {
+                "month": "2009",
+                "commits": 17,
+                "issues": 6,
+                "pulls": 11
+            },
+            {
+                "month": "2010",
+                "commits": 5,
+                "issues": 11,
+                "pulls": 5
+            },
+            {
+                "month": "2011",
+                "commits": 0,
+                "issues": 8,
+                "pulls": 2
+            },
+            {
+                "month": "2012",
+                "commits": 0,
+                "issues": 13,
+                "pulls": 2
+            },
+            {
+                "month": "2101",
+                "commits": 0,
+                "issues": 8,
+                "pulls": 2
+            },
+            {
+                "month": "2102",
+                "commits": 0,
+                "issues": 5,
+                "pulls": 0
+            },
+            {
+                "month": "2103",
+                "commits": 0,
+                "issues": 3,
+                "pulls": 0
+            },
+            {
+                "month": "2104",
+                "commits": 0,
+                "issues": 4,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "zetacomponents",
+        "Github_link": "https://github.com/apache/zetacomponents",
+        "start_date": "2011-03-06",
+        "monthly_metrics": [
+            {
+                "month": "1504",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1505",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1506",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1507",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1508",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1509",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1510",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1511",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1512",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1601",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1602",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1603",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1604",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1605",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1606",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1607",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1608",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1609",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1610",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1611",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1612",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1701",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1702",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1703",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "kylin",
+        "Github_link": "https://github.com/apache/kylin",
+        "start_date": "2015-01-03",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 15,
+                "issues": 0,
+                "pulls": 9
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 12
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 9
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 13
+            },
+            {
+                "month": "2308",
+                "commits": 27,
+                "issues": 0,
+                "pulls": 9
+            },
+            {
+                "month": "2309",
+                "commits": 27,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2310",
+                "commits": 3,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 4
+            },
+            {
+                "month": "2312",
+                "commits": 4,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2401",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2402",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2403",
+                "commits": 29,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 13
+            },
+            {
+                "month": "2405",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2406",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 6
+            },
+            {
+                "month": "2408",
+                "commits": 10,
+                "issues": 0,
+                "pulls": 12
+            },
+            {
+                "month": "2409",
+                "commits": 29,
+                "issues": 0,
+                "pulls": 35
+            },
+            {
+                "month": "2410",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2411",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2412",
+                "commits": 7,
+                "issues": 0,
+                "pulls": 7
+            },
+            {
+                "month": "2501",
+                "commits": 1,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 76
+            }
+        ]
+    },
+    {
+        "name": "hadoop",
+        "Github_link": "https://github.com/apache/hadoop",
+        "start_date": "2014-08-28",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 82
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 87
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 97
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 96
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 112
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 102
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 122
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 108
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 76
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 87
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 122
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 90
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 93
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 90
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 71
+            },
+            {
+                "month": "2406",
+                "commits": 27,
+                "issues": 0,
+                "pulls": 54
+            },
+            {
+                "month": "2407",
+                "commits": 29,
+                "issues": 0,
+                "pulls": 60
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 53
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 69
+            },
+            {
+                "month": "2410",
+                "commits": 20,
+                "issues": 0,
+                "pulls": 58
+            },
+            {
+                "month": "2411",
+                "commits": 23,
+                "issues": 0,
+                "pulls": 54
+            },
+            {
+                "month": "2412",
+                "commits": 21,
+                "issues": 0,
+                "pulls": 70
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 82
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 107
+            }
+        ]
+    },
+    {
+        "name": "cloudstack",
+        "Github_link": "https://github.com/apache/cloudstack",
+        "start_date": "2013-04-29",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 45,
+                "pulls": 45
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 46,
+                "pulls": 51
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 53,
+                "pulls": 47
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 68,
+                "pulls": 67
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 34,
+                "pulls": 53
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 44,
+                "pulls": 95
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 35,
+                "pulls": 59
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 58,
+                "pulls": 89
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 54,
+                "pulls": 73
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 62,
+                "pulls": 72
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 77,
+                "pulls": 98
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 68,
+                "pulls": 83
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 66,
+                "pulls": 69
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 69,
+                "pulls": 91
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 45,
+                "pulls": 71
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 43,
+                "pulls": 110
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 67,
+                "pulls": 71
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 61,
+                "pulls": 60
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 50,
+                "pulls": 63
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 55,
+                "pulls": 50
+            },
+            {
+                "month": "2411",
+                "commits": 30,
+                "issues": 62,
+                "pulls": 34
+            },
+            {
+                "month": "2412",
+                "commits": 30,
+                "issues": 49,
+                "pulls": 65
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 40,
+                "pulls": 81
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 61,
+                "pulls": 69
+            }
+        ]
+    },
+    {
+        "name": "shardingsphere",
+        "Github_link": "https://github.com/apache/shardingsphere",
+        "start_date": "2016-01-18",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 183,
+                "pulls": 368
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 130,
+                "pulls": 364
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 95,
+                "pulls": 477
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 252,
+                "pulls": 499
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 367,
+                "pulls": 527
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 316,
+                "pulls": 420
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 118,
+                "pulls": 167
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 67,
+                "pulls": 223
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 130,
+                "pulls": 217
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 102,
+                "pulls": 277
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 61,
+                "pulls": 279
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 59,
+                "pulls": 369
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 69,
+                "pulls": 311
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 86,
+                "pulls": 289
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 122,
+                "pulls": 314
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 97,
+                "pulls": 341
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 69,
+                "pulls": 309
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 60,
+                "pulls": 348
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 65,
+                "pulls": 265
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 60,
+                "pulls": 360
+            },
+            {
+                "month": "2411",
+                "commits": 30,
+                "issues": 65,
+                "pulls": 318
+            },
+            {
+                "month": "2412",
+                "commits": 30,
+                "issues": 66,
+                "pulls": 295
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 40,
+                "pulls": 293
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 21,
+                "pulls": 268
+            }
+        ]
+    },
+    {
+        "name": "superset",
+        "Github_link": "https://github.com/apache/superset",
+        "start_date": "2015-07-21",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 83,
+                "pulls": 185
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 86,
+                "pulls": 213
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 102,
+                "pulls": 227
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 77,
+                "pulls": 200
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 91,
+                "pulls": 167
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 99,
+                "pulls": 180
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 119,
+                "pulls": 163
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 128,
+                "pulls": 177
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 107,
+                "pulls": 179
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 64,
+                "pulls": 126
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 80,
+                "pulls": 468
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 81,
+                "pulls": 267
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 96,
+                "pulls": 338
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 125,
+                "pulls": 322
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 121,
+                "pulls": 351
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 79,
+                "pulls": 201
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 108,
+                "pulls": 196
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 70,
+                "pulls": 186
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 105,
+                "pulls": 229
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 79,
+                "pulls": 204
+            },
+            {
+                "month": "2411",
+                "commits": 30,
+                "issues": 81,
+                "pulls": 311
+            },
+            {
+                "month": "2412",
+                "commits": 30,
+                "issues": 102,
+                "pulls": 257
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 111,
+                "pulls": 230
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 81,
+                "pulls": 235
+            }
+        ]
+    },
+    {
+        "name": "hive",
+        "Github_link": "https://github.com/apache/hive",
+        "start_date": "2009-05-21",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 96
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 97
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 102
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 87
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 75
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 115
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 121
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 81
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 73
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 61
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 84
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 57
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 66
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 56
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 44
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 55
+            },
+            {
+                "month": "2407",
+                "commits": 26,
+                "issues": 0,
+                "pulls": 50
+            },
+            {
+                "month": "2408",
+                "commits": 27,
+                "issues": 0,
+                "pulls": 50
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 54
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 49
+            },
+            {
+                "month": "2411",
+                "commits": 25,
+                "issues": 0,
+                "pulls": 41
+            },
+            {
+                "month": "2412",
+                "commits": 24,
+                "issues": 0,
+                "pulls": 26
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 35
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 38
+            }
+        ]
+    },
+    {
+        "name": "beam",
+        "Github_link": "https://github.com/apache/beam",
+        "start_date": "2016-02-02",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 126,
+                "pulls": 272
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 110,
+                "pulls": 318
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 157,
+                "pulls": 323
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 101,
+                "pulls": 267
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 117,
+                "pulls": 343
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 105,
+                "pulls": 416
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 112,
+                "pulls": 372
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 116,
+                "pulls": 385
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 62,
+                "pulls": 293
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 69,
+                "pulls": 241
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 74,
+                "pulls": 228
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 63,
+                "pulls": 228
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 122,
+                "pulls": 237
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 80,
+                "pulls": 257
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 98,
+                "pulls": 233
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 69,
+                "pulls": 201
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 104,
+                "pulls": 225
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 100,
+                "pulls": 242
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 49,
+                "pulls": 184
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 111,
+                "pulls": 286
+            },
+            {
+                "month": "2411",
+                "commits": 30,
+                "issues": 68,
+                "pulls": 196
+            },
+            {
+                "month": "2412",
+                "commits": 30,
+                "issues": 56,
+                "pulls": 167
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 96,
+                "pulls": 260
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 81,
+                "pulls": 232
+            }
+        ]
+    },
+    {
+        "name": "ofbiz",
+        "Github_link": "https://github.com/apache/ofbiz",
+        "start_date": "2009-05-20",
+        "monthly_metrics": [
+            {
+                "month": "1804",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1805",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1806",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1807",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "1808",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "1809",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1810",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1811",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1812",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "1901",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1902",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1903",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "1904",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "1905",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "1906",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1907",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1908",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1909",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1910",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1911",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "1912",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2001",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2002",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2003",
+                "commits": 0,
+                "issues": 0,
+                "pulls": 0
+            }
+        ]
+    },
+    {
+        "name": "doris",
+        "Github_link": "https://github.com/apache/doris",
+        "start_date": "2017-08-10",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 197,
+                "pulls": 810
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 124,
+                "pulls": 780
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 154,
+                "pulls": 924
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 126,
+                "pulls": 943
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 98,
+                "pulls": 947
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 121,
+                "pulls": 1175
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 135,
+                "pulls": 1127
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 108,
+                "pulls": 1068
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 119,
+                "pulls": 1531
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 113,
+                "pulls": 1361
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 141,
+                "pulls": 1182
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 91,
+                "pulls": 906
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 140,
+                "pulls": 1337
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 97,
+                "pulls": 1158
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 85,
+                "pulls": 1272
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 106,
+                "pulls": 1212
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 91,
+                "pulls": 1584
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 71,
+                "pulls": 1491
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 59,
+                "pulls": 1210
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 266,
+                "pulls": 1330
+            },
+            {
+                "month": "2411",
+                "commits": 30,
+                "issues": 80,
+                "pulls": 1695
+            },
+            {
+                "month": "2412",
+                "commits": 30,
+                "issues": 54,
+                "pulls": 1339
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 48,
+                "pulls": 1191
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 40,
+                "pulls": 963
+            }
+        ]
+    },
+    {
+        "name": "camel",
+        "Github_link": "https://github.com/apache/camel",
+        "start_date": "2009-05-21",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 301
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 227
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 283
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 306
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 395
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 350
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 352
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 267
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 414
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 346
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 348
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 400
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 316
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 343
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 301
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 395
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 321
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 396
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 407
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 380
+            },
+            {
+                "month": "2411",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 275
+            },
+            {
+                "month": "2412",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 270
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 336
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 309
+            }
+        ]
+    },
+    {
+        "name": "sedona",
+        "Github_link": "https://github.com/apache/sedona",
+        "start_date": "2015-04-24",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 4,
+                "pulls": 29
+            },
+            {
+                "month": "2304",
+                "commits": 9,
+                "issues": 2,
+                "pulls": 11
+            },
+            {
+                "month": "2305",
+                "commits": 18,
+                "issues": 5,
+                "pulls": 16
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 7,
+                "pulls": 28
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 11,
+                "pulls": 45
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 6,
+                "pulls": 53
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 7,
+                "pulls": 41
+            },
+            {
+                "month": "2310",
+                "commits": 17,
+                "issues": 9,
+                "pulls": 19
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 6,
+                "pulls": 64
+            },
+            {
+                "month": "2312",
+                "commits": 26,
+                "issues": 7,
+                "pulls": 34
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 9,
+                "pulls": 52
+            },
+            {
+                "month": "2402",
+                "commits": 23,
+                "issues": 6,
+                "pulls": 35
+            },
+            {
+                "month": "2403",
+                "commits": 22,
+                "issues": 13,
+                "pulls": 30
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 15,
+                "pulls": 85
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 9,
+                "pulls": 49
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 10,
+                "pulls": 51
+            },
+            {
+                "month": "2407",
+                "commits": 23,
+                "issues": 5,
+                "pulls": 30
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 2,
+                "pulls": 37
+            },
+            {
+                "month": "2409",
+                "commits": 24,
+                "issues": 7,
+                "pulls": 35
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 6,
+                "pulls": 56
+            },
+            {
+                "month": "2411",
+                "commits": 30,
+                "issues": 6,
+                "pulls": 37
+            },
+            {
+                "month": "2412",
+                "commits": 19,
+                "issues": 14,
+                "pulls": 18
+            },
+            {
+                "month": "2501",
+                "commits": 23,
+                "issues": 18,
+                "pulls": 29
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 10,
+                "pulls": 43
+            }
+        ]
+    },
+    {
+        "name": "hudi",
+        "Github_link": "https://github.com/apache/hudi",
+        "start_date": "2016-12-14",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 103,
+                "pulls": 171
+            },
+            {
+                "month": "2304",
+                "commits": 30,
+                "issues": 76,
+                "pulls": 197
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 73,
+                "pulls": 185
+            },
+            {
+                "month": "2306",
+                "commits": 30,
+                "issues": 79,
+                "pulls": 171
+            },
+            {
+                "month": "2307",
+                "commits": 30,
+                "issues": 53,
+                "pulls": 179
+            },
+            {
+                "month": "2308",
+                "commits": 30,
+                "issues": 72,
+                "pulls": 207
+            },
+            {
+                "month": "2309",
+                "commits": 30,
+                "issues": 59,
+                "pulls": 162
+            },
+            {
+                "month": "2310",
+                "commits": 30,
+                "issues": 52,
+                "pulls": 108
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 54,
+                "pulls": 210
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 67,
+                "pulls": 144
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 45,
+                "pulls": 128
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 42,
+                "pulls": 153
+            },
+            {
+                "month": "2403",
+                "commits": 30,
+                "issues": 47,
+                "pulls": 115
+            },
+            {
+                "month": "2404",
+                "commits": 30,
+                "issues": 41,
+                "pulls": 151
+            },
+            {
+                "month": "2405",
+                "commits": 30,
+                "issues": 54,
+                "pulls": 192
+            },
+            {
+                "month": "2406",
+                "commits": 30,
+                "issues": 34,
+                "pulls": 144
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 47,
+                "pulls": 128
+            },
+            {
+                "month": "2408",
+                "commits": 30,
+                "issues": 54,
+                "pulls": 101
+            },
+            {
+                "month": "2409",
+                "commits": 30,
+                "issues": 58,
+                "pulls": 110
+            },
+            {
+                "month": "2410",
+                "commits": 30,
+                "issues": 28,
+                "pulls": 131
+            },
+            {
+                "month": "2411",
+                "commits": 30,
+                "issues": 24,
+                "pulls": 177
+            },
+            {
+                "month": "2412",
+                "commits": 30,
+                "issues": 17,
+                "pulls": 162
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 26,
+                "pulls": 174
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 17,
+                "pulls": 129
+            }
+        ]
+    },
+    {
+        "name": "openoffice",
+        "Github_link": "https://github.com/apache/openoffice",
+        "start_date": "2013-11-13",
+        "monthly_metrics": [
+            {
+                "month": "2303",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 4
+            },
+            {
+                "month": "2304",
+                "commits": 22,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2305",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2306",
+                "commits": 23,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2307",
+                "commits": 18,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2308",
+                "commits": 15,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2309",
+                "commits": 13,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2310",
+                "commits": 19,
+                "issues": 0,
+                "pulls": 0
+            },
+            {
+                "month": "2311",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 10
+            },
+            {
+                "month": "2312",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 9
+            },
+            {
+                "month": "2401",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 4
+            },
+            {
+                "month": "2402",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 5
+            },
+            {
+                "month": "2403",
+                "commits": 29,
+                "issues": 0,
+                "pulls": 5
+            },
+            {
+                "month": "2404",
+                "commits": 20,
+                "issues": 0,
+                "pulls": 4
+            },
+            {
+                "month": "2405",
+                "commits": 14,
+                "issues": 0,
+                "pulls": 4
+            },
+            {
+                "month": "2406",
+                "commits": 21,
+                "issues": 0,
+                "pulls": 5
+            },
+            {
+                "month": "2407",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 3
+            },
+            {
+                "month": "2408",
+                "commits": 20,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2409",
+                "commits": 13,
+                "issues": 0,
+                "pulls": 1
+            },
+            {
+                "month": "2410",
+                "commits": 18,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2411",
+                "commits": 26,
+                "issues": 0,
+                "pulls": 2
+            },
+            {
+                "month": "2412",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 15
+            },
+            {
+                "month": "2501",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 26
+            },
+            {
+                "month": "2502",
+                "commits": 30,
+                "issues": 0,
+                "pulls": 48
+            }
+        ]
+    }
+]
