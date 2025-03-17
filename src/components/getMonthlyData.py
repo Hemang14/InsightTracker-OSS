@@ -1,9 +1,10 @@
 import requests
 import datetime
 import os
+import json
 
 # GitHub Token for Authentication
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "ADD_GITHUB_TOKEN_HERE") # Add GitHub token here
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "TOKEN") # Add GitHub token here
 
 # GitHub API Headers with Authentication
 HEADERS = {
@@ -169,28 +170,133 @@ def collect_metrics_for_month(month, repos):
 
     return results
 
+def map_label_to_number(label):
+    label_mapping = {
+        "Accelerating": 6,
+        "Consolidating": 5,
+        "Maintaining": 4,
+        "Plateauing": 3,
+        "Declining": 2,
+        "Crisis": 1
+    }
+    return label_mapping.get(label, -1)  # Return -1 for unknown labels
+
+def convert_month_format(month):
+    """Convert 'YYYY-MM' to 'YYMM' format."""
+    year, month_num = month.split("-")
+    return f"{year[-2:]}{month_num}"
+
+# Function to load existing JSON data
+def load_existing_data():
+    try:
+        with open("repository_metrics.json", "r") as f:
+            try:
+                return json.load(f)  # Load JSON content
+            except json.JSONDecodeError:
+                return {}  # Return empty dict if JSON is corrupted
+    except FileNotFoundError:
+        return {}
+
+# Function to filter out already processed repositories
+def filter_unprocessed_repos(repos, existing_data):
+    processed_repos = set(existing_data.keys())  # Extract repo URLs from JSON keys
+    return [repo for repo in repos if f"https://github.com/{repo['full_name']}" not in processed_repos]
+
 # Run script for a specific month and calculate the composite score
 if __name__ == "__main__":
-    month = input("Enter month (YYYY-MM): ")
+    # month = input("Enter month (YYYY-MM): ")
 
-    # Compute the previous month
-    year, month_num = map(int, month.split("-"))
-    prev_month = f"{year - 1}-12" if month_num == 1 else f"{year}-{month_num - 1:02d}"
+    # # Compute the previous month
+    # year, month_num = map(int, month.split("-"))
+    # prev_month = f"{year - 1}-12" if month_num == 1 else f"{year}-{month_num - 1:02d}"
 
-    print(f"Fetching data for {month} and {prev_month}...")
+    # print(f"Fetching data for {month} and {prev_month}...")
 
-    repos = get_repositories()
-    current_data = collect_metrics_for_month(month, repos)
-    previous_data = collect_metrics_for_month(prev_month, repos)
+    # Get today's date
+    today = datetime.date.today()
 
-    print("\nFinal Report:\n")
-    for repo, metrics in current_data.items():
-        previous_metrics = previous_data.get(repo, {metric: 0 for metric in metrics})
+    monthly_data = []
 
-        data = {metric: {'current': metrics[metric], 'previous': previous_metrics.get(metric, 0)}
-                for metric in metrics}
+    existing_data = load_existing_data()  # Load previously processed data
 
-        score = calculate_composite_score(data)
-        label = assign_label(score)
+    # Fetch repositories and remove already processed ones
+    all_repos = get_repositories()
+    repos = filter_unprocessed_repos(all_repos, existing_data)
 
-        print(f"{repo} - Score: {score:.2f}, Label: {label}")
+    # Iterate over the last 24 months
+    for i in range(1, 24):
+        # Calculate target month by subtracting `i` months
+        target_year = today.year
+        target_month = today.month - i
+
+        # Correct year and month when rolling back past January
+        while target_month <= 0:
+            target_year -= 1
+            target_month += 12  # Convert negative month to valid range
+
+        # Compute previous month correctly
+        prev_year, prev_month = target_year, target_month - 1
+        if prev_month == 0:  # Handle transition from January to December of previous year
+            prev_year -= 1
+            prev_month = 12
+
+        # Format YYYY-MM for output
+        current_month = f"{target_year}-{target_month:02d}"
+        prev_month = f"{prev_year}-{prev_month:02d}"
+
+        print(f"Fetching data for {current_month} and {prev_month}...")
+
+        current_data = collect_metrics_for_month(current_month, repos)
+        previous_data = collect_metrics_for_month(prev_month, repos)
+
+        repo_data = []
+
+        print("\nFinal Report:\n")
+        for repo, metrics in current_data.items():
+            previous_metrics = previous_data.get(repo, {metric: 0 for metric in metrics})
+
+            data = {metric: {'current': metrics[metric], 'previous': previous_metrics.get(metric, 0)}
+                    for metric in metrics}
+
+            score = calculate_composite_score(data)
+            label = assign_label(score)
+
+            repo_data.append({
+                "Repo" : f"https://github.com/{repo}",
+                "Score": score,
+                "Label": map_label_to_number(label),
+                })
+
+            print(repo_data)
+        
+        monthly_data.append({
+            "Month": convert_month_format(current_month),
+            "Repo_data": repo_data,
+            })
+        
+        print (monthly_data)
+
+        # Transform the structure
+        repo_wise_data = {}
+
+        for month_entry in monthly_data:
+            month = month_entry["Month"]
+            for repo_entry in month_entry["Repo_data"]:
+                repo = repo_entry["Repo"]
+                
+                if repo not in repo_wise_data:
+                    repo_wise_data[repo] = []
+
+                repo_wise_data[repo].append({
+                    "Month": month,
+                    "Score": repo_entry["Score"],
+                    "Label": repo_entry["Label"]
+                })
+
+        print(repo_wise_data)
+
+        # Save the transformed JSON
+        with open("repository_metrics.json", "w") as f:
+            json.dump(repo_wise_data, f, indent=4)
+
+    
