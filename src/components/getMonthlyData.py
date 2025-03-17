@@ -2,6 +2,7 @@ import requests
 import datetime
 import os
 import json
+import time
 
 # GitHub Token for Authentication
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "TOKEN") # Add GitHub token here
@@ -14,12 +15,38 @@ HEADERS = {
 
 # Base API URL
 BASE_URL = "https://api.github.com"
+JSON_FILE = "repository_metrics.json"
 
-# Function to get repositories
-def get_repositories():
-    url = f"{BASE_URL}/orgs/apache/repos?per_page=100&sort=pushed"
+# Function to get repositories along with their last pushed date
+def get_repositories(archived):
+    url = f"{BASE_URL}/search/repositories?per_page=100&q=org:apache+archived:{archived}"
+    print(f"Fetching repositories from: {url}")
     response = requests.get(url, headers=HEADERS)
-    return response.json() if response.status_code == 200 else []
+    data = response.json()
+    
+    if response.status_code != 200:
+        return []
+
+    # Extract repo names and last pushed dates
+    return [{"full_name": repo["full_name"], "pushed_at": repo["pushed_at"], "archived": repo["archived"]} for repo in data.get("items", [])]
+
+# Function to compute last 24 months from a repo's pushed date
+def get_last_24_months(pushed_date):
+    pushed_date = datetime.datetime.strptime(pushed_date, "%Y-%m-%dT%H:%M:%SZ").date()
+    months = []
+    
+    for i in range(1, 26):
+        year = pushed_date.year
+        month = pushed_date.month - i
+        
+        while month <= 0:
+            year -= 1
+            month += 12  # Handle negative month values
+
+        months.append(f"{year}-{month:02d}")
+
+    return months[::-1]  # Reverse to get oldest first
+
 
 # Function to fetch commits per month
 def get_commits(repo_full_name, month):
@@ -144,32 +171,6 @@ def assign_label(score):
     else:
         return 'Data Insufficient'
 
-# Function to collect data for a given month
-def collect_metrics_for_month(month, repos):
-    results = {}
-
-    for repo in repos:
-        repo_name = repo["full_name"]
-        print(f"Processing {repo_name} for {month}...")
-
-        commits = get_commits(repo_name, month)
-        pr_closed = get_pull_requests(repo_name, month)
-        issues_resolved = get_issues_resolved(repo_name, month)
-        milestones_completed = get_milestones_completed(repo_name, month)
-        lines_added, lines_removed = get_code_churn(repo_name, month)
-        mails = get_mails_per_month(repo_name, month)
-
-        results[repo_name] = {
-            'commits': commits,
-            'pull_requests': pr_closed,
-            'issues_resolved': issues_resolved,
-            'milestones': milestones_completed,
-            'code_churn': lines_added - lines_removed,
-            'community_engagement': mails
-        }
-
-    return results
-
 def map_label_to_number(label):
     label_mapping = {
         "Accelerating": 6,
@@ -188,115 +189,96 @@ def convert_month_format(month):
 
 # Function to load existing JSON data
 def load_existing_data():
-    try:
-        with open("repository_metrics.json", "r") as f:
+    if os.path.exists(JSON_FILE):
+        with open(JSON_FILE, "r") as f:
             try:
-                return json.load(f)  # Load JSON content
+                return json.load(f)
             except json.JSONDecodeError:
-                return {}  # Return empty dict if JSON is corrupted
-    except FileNotFoundError:
-        return {}
+                return []  # Return empty list if JSON is corrupted
+    return []
 
 # Function to filter out already processed repositories
 def filter_unprocessed_repos(repos, existing_data):
     processed_repos = set(existing_data.keys())  # Extract repo URLs from JSON keys
     return [repo for repo in repos if f"https://github.com/{repo['full_name']}" not in processed_repos]
 
-# Run script for a specific month and calculate the composite score
 if __name__ == "__main__":
-    # month = input("Enter month (YYYY-MM): ")
-
-    # # Compute the previous month
-    # year, month_num = map(int, month.split("-"))
-    # prev_month = f"{year - 1}-12" if month_num == 1 else f"{year}-{month_num - 1:02d}"
-
-    # print(f"Fetching data for {month} and {prev_month}...")
-
-    # Get today's date
-    today = datetime.date.today()
-
-    monthly_data = []
-
-    existing_data = load_existing_data()  # Load previously processed data
+    existing_data = []
+    # load_existing_data()  # Load previously processed data
 
     # Fetch repositories and remove already processed ones
-    all_repos = get_repositories()
-    repos = filter_unprocessed_repos(all_repos, existing_data)
+    archived_repos = get_repositories(archived="true")
+    non_archived_repos = get_repositories(archived="false")
+    repos = archived_repos + non_archived_repos
 
-    # Iterate over the last 24 months
-    for i in range(1, 24):
-        # Calculate target month by subtracting `i` months
-        target_year = today.year
-        target_month = today.month - i
+    # repos = filter_unprocessed_repos(all_repos, existing_data)
 
-        # Correct year and month when rolling back past January
-        while target_month <= 0:
-            target_year -= 1
-            target_month += 12  # Convert negative month to valid range
+    print("\nProcessing the following new repositories:")
+    for repo in repos:
+        print(f"➡️ {repo['full_name']} (Last Pushed: {repo['pushed_at']})")
 
-        # Compute previous month correctly
-        prev_year, prev_month = target_year, target_month - 1
-        if prev_month == 0:  # Handle transition from January to December of previous year
-            prev_year -= 1
-            prev_month = 12
+    for repo in repos:
+        repo_name = repo["full_name"]
+        repo_url = f"https://github.com/{repo_name}"
+        last_pushed = repo["pushed_at"]
 
-        # Format YYYY-MM for output
-        current_month = f"{target_year}-{target_month:02d}"
-        prev_month = f"{prev_year}-{prev_month:02d}"
+        print(f"\n📌 Processing {repo_name} (Last Pushed: {last_pushed})")
 
-        print(f"Fetching data for {current_month} and {prev_month}...")
-
-        current_data = collect_metrics_for_month(current_month, repos)
-        previous_data = collect_metrics_for_month(prev_month, repos)
+        last_24_months = get_last_24_months(last_pushed)
 
         repo_data = []
 
-        print("\nFinal Report:\n")
-        for repo, metrics in current_data.items():
-            previous_metrics = previous_data.get(repo, {metric: 0 for metric in metrics})
+        for i in range(len(last_24_months) - 1):
+            curr_month = last_24_months[len(last_24_months) - i - 1]
+            print(f"Fetching data for {repo_name} in {curr_month}...")
 
-            data = {metric: {'current': metrics[metric], 'previous': previous_metrics.get(metric, 0)}
-                    for metric in metrics}
+            # Fetching required metrics
+            commits = get_commits(repo_name, curr_month)
+            pr_closed = get_pull_requests(repo_name, curr_month)
+            issues_resolved = get_issues_resolved(repo_name, curr_month)
+            milestones_completed = get_milestones_completed(repo_name, curr_month)
+            lines_added, lines_removed = get_code_churn(repo_name, curr_month)
+            mails = get_mails_per_month(repo_name, curr_month)
 
-            score = calculate_composite_score(data)
+            prev_month = last_24_months[len(last_24_months) - i - 2]
+            print(f"Fetching data for {repo_name} in {prev_month}...")
+
+            # Fetching required metrics
+            commits_prev = get_commits(repo_name, prev_month)
+            pr_closed_prev = get_pull_requests(repo_name, prev_month)
+            issues_resolved_prev = get_issues_resolved(repo_name, prev_month)
+            milestones_completed_prev = get_milestones_completed(repo_name, prev_month)
+            lines_added_prev, lines_removed_prev = get_code_churn(repo_name, prev_month)
+            mails_prev = get_mails_per_month(repo_name, prev_month)
+
+            # Compute composite score
+            score = calculate_composite_score({
+                "commits": {"current": commits, "previous": commits_prev},  
+                "pull_requests": {"current": pr_closed, "previous": pr_closed_prev},
+                "issues_resolved": {"current": issues_resolved, "previous": issues_resolved_prev},
+                "milestones": {"current": milestones_completed, "previous": milestones_completed_prev},
+                "code_churn": {"current": lines_added - lines_removed, "previous": lines_added_prev - lines_removed_prev},
+                "community_engagement": {"current": mails, "previous": mails_prev}
+            })
             label = assign_label(score)
 
             repo_data.append({
-                "Repo" : f"https://github.com/{repo}",
+                "Month": convert_month_format(curr_month),
                 "Score": score,
-                "Label": map_label_to_number(label),
-                })
-
-            print(repo_data)
-        
-        monthly_data.append({
-            "Month": convert_month_format(current_month),
-            "Repo_data": repo_data,
+                "Label": map_label_to_number(label)
             })
-        
-        print (monthly_data)
 
-        # Transform the structure
-        repo_wise_data = {}
+            time.sleep(5)  # Avoid hitting GitHub API rate limits
 
-        for month_entry in monthly_data:
-            month = month_entry["Month"]
-            for repo_entry in month_entry["Repo_data"]:
-                repo = repo_entry["Repo"]
-                
-                if repo not in repo_wise_data:
-                    repo_wise_data[repo] = []
+        # Store repo data in JSON format
+        existing_data.append({
+                "Github_link": repo_url,
+                "monthly_metrics": repo_data,
+                "final_status": 0.0 if repo["archived"] else 1.0
+            })
 
-                repo_wise_data[repo].append({
-                    "Month": month,
-                    "Score": repo_entry["Score"],
-                    "Label": repo_entry["Label"]
-                })
+        # Save updated JSON after processing each repo
+        with open(JSON_FILE, "w") as f:
+            json.dump(existing_data, f, indent=4)
 
-        print(repo_wise_data)
-
-        # Save the transformed JSON
-        with open("repository_metrics.json", "w") as f:
-            json.dump(repo_wise_data, f, indent=4)
-
-    
+    print("✅ Processing complete! Data saved in repository_metrics.json")
