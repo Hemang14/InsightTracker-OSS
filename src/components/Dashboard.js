@@ -17,7 +17,7 @@ const Dashboard = () => {
       try {
         const response = await fetch(API_URL);
         const data = await response.json();
-        // Process API data into the format needed
+
         const formattedProjects = data.map((repo) => ({
           id: repo.id,
           name: repo.name,
