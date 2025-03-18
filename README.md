@@ -58,5 +58,5 @@ npm start
 - [LinkedIn](https://www.linkedin.com/in/hemang14/)
 
 ### **Running the LSTM model**
-- To run the data gathering script that fetches the data using the GitHub API, run the script src/components/getMonthlyData.py
+- To run the data gathering script to fetch data using the GitHub API, run the script src/components/getMonthlyData.py
 - Run the LSTM model by running ipynb/lstm-main.ipynb
