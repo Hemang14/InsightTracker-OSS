@@ -1,3 +1,7 @@
+# **Running the LSTM model**
+- To run the data gathering script to fetch data using the **GitHub API**, run the script ***src/components/getMonthlyData.py***
+- Run the **LSTM** model by running ***ipynb/lstm-main.ipynb***
+
 # 📊 **InsightTracker OSS**
 
 OSS Dashboard is a web application designed to track and visualize open-source project metrics, including commits, pull requests, and issue resolution trends. The dashboard provides an **interactive UI** for project monitoring, label insights, and historical analysis.
@@ -56,7 +60,3 @@ npm start
 - **Hemang Singh**
 - [GitHub](https://github.com/Hemang14)
 - [LinkedIn](https://www.linkedin.com/in/hemang14/)
-
-### **Running the LSTM model**
-- To run the data gathering script to fetch data using the GitHub API, run the script src/components/getMonthlyData.py
-- Run the LSTM model by running ipynb/lstm-main.ipynb
