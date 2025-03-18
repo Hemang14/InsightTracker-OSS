@@ -56,3 +56,7 @@ npm start
 - **Hemang Singh**
 - [GitHub](https://github.com/Hemang14)
 - [LinkedIn](https://www.linkedin.com/in/hemang14/)
+
+### **Running the LSTM model**
+- To run the data gathering script that fetches the data using the GitHub API, run the script src/components/getMonthlyData.py
+- Run the LSTM model by running src/ipynb/lstm-main.ipynb
