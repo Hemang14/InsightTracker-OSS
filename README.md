@@ -8,7 +8,7 @@ OSS Dashboard is a web application designed to track and visualize open-source p
 
 ## 🚀 Features
 
-### **1️⃣ Dashboard Overview**
+### **1️⃣ Dashboard Overview***
 - Displays a high-level overview of all tracked **Open-Source Software (OSS)** projects.
 - Includes **search functionality** and **filter options**.
 
