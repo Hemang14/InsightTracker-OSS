@@ -4,7 +4,6 @@ import os
 import json
 import time
 
-# GitHub Token for Authentication
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "TOKEN")
 
 HEADERS = {
@@ -15,7 +14,6 @@ HEADERS = {
 BASE_URL = "https://api.github.com"
 JSON_FILE = "repository_metrics.json"
 
-# Function to get repositories along with their last pushed date
 def get_repositories(archived):
     url = f"{BASE_URL}/search/repositories?per_page=61&q=org:apache+archived:{archived}"
     print(f"Fetching repositories from: {url}")
@@ -27,7 +25,6 @@ def get_repositories(archived):
 
     return [{"full_name": repo["full_name"], "pushed_at": repo["pushed_at"], "archived": repo["archived"]} for repo in data.get("items", [])]
 
-# Function to compute last 24 months from a repo's pushed date
 def get_last_24_months(pushed_date):
     pushed_date = datetime.datetime.strptime(pushed_date, "%Y-%m-%dT%H:%M:%SZ").date()
     months = []
@@ -38,14 +35,13 @@ def get_last_24_months(pushed_date):
         
         while month <= 0:
             year -= 1
-            month += 12  # Handle negative month values
+            month += 12  
 
         months.append(f"{year}-{month:02d}")
 
-    return months[::-1]  # Reverse to get oldest first
+    return months[::-1]  
 
 
-# Function to fetch commits per month
 def get_commits(repo_full_name, month):
     split_year, split_month = map(int, month.split("-")) 
     start_date = datetime.date(split_year, split_month, 1)  
@@ -60,7 +56,6 @@ def get_commits(repo_full_name, month):
         return 0
     return len(response.json())
 
-# Function to fetch pull request data
 def get_pull_requests(repo_full_name, month):
     split_year, split_month = map(int, month.split("-"))  
     start_date = datetime.date(split_year, split_month, 1)  
@@ -77,7 +72,6 @@ def get_pull_requests(repo_full_name, month):
     return data["total_count"]
     
 
-# Function to fetch issues resolved per month
 def get_issues_resolved(repo_full_name, month):
     split_year, split_month = map(int, month.split("-"))  
     start_date = datetime.date(split_year, split_month, 1)  
@@ -93,7 +87,6 @@ def get_issues_resolved(repo_full_name, month):
     data = response.json()
     return data["total_count"]
 
-# Function to fetch completed milestones per month
 def get_milestones_completed(repo_full_name, month):
     milestones_url = f"{BASE_URL}/repos/{repo_full_name}/milestones?state=closed&per_page=100"
     response = requests.get(milestones_url, headers=HEADERS)
@@ -104,7 +97,6 @@ def get_milestones_completed(repo_full_name, month):
     milestones = response.json()
     return sum(1 for milestone in milestones if milestone["closed_at"][:7] == month)
 
-# Function to fetch code churn per month (lines added vs removed)
 def get_code_churn(repo_full_name, month):
     split_year, split_month = map(int, month.split("-"))  
     start_date = datetime.date(split_year, split_month, 1)  
@@ -135,7 +127,6 @@ def get_code_churn(repo_full_name, month):
 
     return lines_added, lines_removed
 
-# Function to estimate mails per month from PR discussions and commit messages
 def get_mails_per_month(repo_full_name, month):
     split_year, split_month = map(int, month.split("-")) 
     start_date = datetime.date(split_year, split_month, 1)  
@@ -148,7 +139,6 @@ def get_mails_per_month(repo_full_name, month):
     comments = response.json()
     return sum(1 for comment in comments if comment["created_at"][:7] == month)
 
-# Function to calculate the composite score
 def calculate_composite_score(data):
     weights = {
         'commits': 20,
@@ -166,7 +156,6 @@ def calculate_composite_score(data):
     
     return score
 
-# Function to assign labels based on the composite score
 def assign_label(score):
     if score > 0.30:
         return 'Accelerating'
@@ -199,7 +188,6 @@ def convert_month_format(month):
     year, month_num = month.split("-")
     return f"{year[-2:]}{month_num}"
 
-# Function to load existing JSON data
 def load_existing_data():
     if os.path.exists(JSON_FILE):
         with open(JSON_FILE, "r") as f:
@@ -209,7 +197,6 @@ def load_existing_data():
                 return []  
     return []
 
-# Function to filter out already processed repositories
 def filter_unprocessed_repos(repos, existing_data):
     processed_repos = {entry["Github_link"] for entry in existing_data}
     return [repo for repo in repos if f"https://github.com/{repo['full_name']}" not in processed_repos]
