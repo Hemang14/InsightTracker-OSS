@@ -19,7 +19,7 @@ JSON_FILE = "repository_metrics.json"
 
 # Function to get repositories along with their last pushed date
 def get_repositories(archived):
-    url = f"{BASE_URL}/search/repositories?per_page=100&q=org:apache+archived:{archived}"
+    url = f"{BASE_URL}/search/repositories?per_page=61&q=org:apache+archived:{archived}"
     print(f"Fetching repositories from: {url}")
     response = requests.get(url, headers=HEADERS)
     data = response.json()
@@ -58,7 +58,10 @@ def get_commits(repo_full_name, month):
         end_date = datetime.date(split_year, split_month + 1, 1) - datetime.timedelta(days=1)  # Last day of month
     pr_url = f"{BASE_URL}/repos/{repo_full_name}/commits?since={start_date}&until={end_date}&per_page=100"
     response = requests.get(pr_url, headers=HEADERS)
-    return len(response.json()) if response.status_code == 200 else 0
+    if response.status_code != 200:
+        print(response.status_code)
+        return 0
+    return len(response.json())
 
 # Function to fetch pull request data
 def get_pull_requests(repo_full_name, month):
@@ -70,8 +73,11 @@ def get_pull_requests(repo_full_name, month):
         end_date = datetime.date(split_year, split_month + 1, 1) - datetime.timedelta(days=1)  # Last day of month
     pr_url = f"{BASE_URL}/search/issues?q=repo:{repo_full_name}+is:pr+closed:{start_date}..{end_date}"
     response = requests.get(pr_url, headers=HEADERS)
+    if response.status_code != 200:
+        print(response.status_code)
+        return 0
     data = response.json()
-    return data["total_count"] if response.status_code == 200 else 0
+    return data["total_count"]
     
 
 # Function to fetch issues resolved per month
@@ -84,14 +90,18 @@ def get_issues_resolved(repo_full_name, month):
         end_date = datetime.date(split_year, split_month + 1, 1) - datetime.timedelta(days=1)  # Last day of month
     issue_url = f"{BASE_URL}/search/issues?q=repo:{repo_full_name}+is:issue+closed:{start_date}..{end_date}"
     response = requests.get(issue_url, headers=HEADERS)
+    if response.status_code != 200:
+        print(response.status_code)
+        return 0
     data = response.json()
-    return data["total_count"] if response.status_code == 200 else 0
+    return data["total_count"]
 
 # Function to fetch completed milestones per month
 def get_milestones_completed(repo_full_name, month):
     milestones_url = f"{BASE_URL}/repos/{repo_full_name}/milestones?state=closed&per_page=100"
     response = requests.get(milestones_url, headers=HEADERS)
     if response.status_code != 200:
+        print(response.status_code)
         return 0
 
     milestones = response.json()
@@ -108,6 +118,7 @@ def get_code_churn(repo_full_name, month):
     commit_url = f"{BASE_URL}/repos/{repo_full_name}/commits?since={start_date}&until={end_date}&per_page=100"
     response = requests.get(commit_url, headers=HEADERS)
     if response.status_code != 200:
+        print(response.status_code)
         return 0, 0
 
     lines_added, lines_removed = 0, 0
@@ -115,7 +126,10 @@ def get_code_churn(repo_full_name, month):
     
     for commit in commits:
         commit_url = commit["url"]
-        commit_details = requests.get(commit_url, headers=HEADERS).json()
+        commit_response = requests.get(commit_url, headers=HEADERS)
+        if commit_response.status_code != 200:
+            print(commit_response.status_code)
+        commit_details = commit_response.json()
         if "stats" in commit_details:
             date = commit_details["commit"]["author"]["date"][:7]  # Extract YYYY-MM
             if date == month:
@@ -131,6 +145,7 @@ def get_mails_per_month(repo_full_name, month):
     comments_url = f"{BASE_URL}/repos/{repo_full_name}/issues/comments?since={start_date}&per_page=100"
     response = requests.get(comments_url, headers=HEADERS)
     if response.status_code != 200:
+        print(response.status_code)
         return 0
 
     comments = response.json()
@@ -199,19 +214,21 @@ def load_existing_data():
 
 # Function to filter out already processed repositories
 def filter_unprocessed_repos(repos, existing_data):
-    processed_repos = set(existing_data.keys())  # Extract repo URLs from JSON keys
+    # Extract processed repo URLs from JSON list
+    processed_repos = {entry["Github_link"] for entry in existing_data}
+
+    # Filter out repos that have already been processed
     return [repo for repo in repos if f"https://github.com/{repo['full_name']}" not in processed_repos]
 
 if __name__ == "__main__":
-    existing_data = []
-    # load_existing_data()  # Load previously processed data
+    existing_data = load_existing_data()  # Load previously processed data
 
     # Fetch repositories and remove already processed ones
     archived_repos = get_repositories(archived="true")
     non_archived_repos = get_repositories(archived="false")
-    repos = archived_repos + non_archived_repos
+    all_repos = archived_repos + non_archived_repos
 
-    # repos = filter_unprocessed_repos(all_repos, existing_data)
+    repos = filter_unprocessed_repos(all_repos, existing_data)
 
     print("\nProcessing the following new repositories:")
     for repo in repos:
@@ -228,17 +245,18 @@ if __name__ == "__main__":
 
         repo_data = []
 
-        for i in range(len(last_24_months) - 1):
-            curr_month = last_24_months[len(last_24_months) - i - 1]
-            print(f"Fetching data for {repo_name} in {curr_month}...")
+        curr_month = last_24_months[len(last_24_months) - 1]
+        print(f"Fetching data for {repo_name} in {curr_month}...")
 
-            # Fetching required metrics
-            commits = get_commits(repo_name, curr_month)
-            pr_closed = get_pull_requests(repo_name, curr_month)
-            issues_resolved = get_issues_resolved(repo_name, curr_month)
-            milestones_completed = get_milestones_completed(repo_name, curr_month)
-            lines_added, lines_removed = get_code_churn(repo_name, curr_month)
-            mails = get_mails_per_month(repo_name, curr_month)
+        # Fetching required metrics
+        commits = get_commits(repo_name, curr_month)
+        pr_closed = get_pull_requests(repo_name, curr_month)
+        issues_resolved = get_issues_resolved(repo_name, curr_month)
+        milestones_completed = get_milestones_completed(repo_name, curr_month)
+        lines_added, lines_removed = get_code_churn(repo_name, curr_month)
+        mails = get_mails_per_month(repo_name, curr_month)
+
+        for i in range(len(last_24_months) - 1):
 
             prev_month = last_24_months[len(last_24_months) - i - 2]
             print(f"Fetching data for {repo_name} in {prev_month}...")
@@ -248,6 +266,9 @@ if __name__ == "__main__":
             pr_closed_prev = get_pull_requests(repo_name, prev_month)
             issues_resolved_prev = get_issues_resolved(repo_name, prev_month)
             milestones_completed_prev = get_milestones_completed(repo_name, prev_month)
+            
+            time.sleep(4)  # Avoid hitting GitHub API rate limits
+
             lines_added_prev, lines_removed_prev = get_code_churn(repo_name, prev_month)
             mails_prev = get_mails_per_month(repo_name, prev_month)
 
@@ -268,7 +289,15 @@ if __name__ == "__main__":
                 "Label": map_label_to_number(label)
             })
 
-            time.sleep(5)  # Avoid hitting GitHub API rate limits
+            commits = commits_prev
+            pr_closed = pr_closed_prev
+            issues_resolved = issues_resolved_prev
+            milestones_completed = milestones_completed_prev
+            lines_added, lines_removed = lines_added_prev, lines_removed_prev
+            mails = mails_prev
+            curr_month = prev_month
+
+            time.sleep(4)  # Avoid hitting GitHub API rate limits
 
         # Store repo data in JSON format
         existing_data.append({
