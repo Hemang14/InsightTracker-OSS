@@ -53,6 +53,9 @@ def get_commits(repo_full_name, month):
     response = requests.get(pr_url, headers=HEADERS)
     if response.status_code != 200:
         print(response.status_code)
+        if response.status_code == 500:
+            print(f"Retrying get_commits for month {month}...")
+            return get_commits(repo_full_name, month)
         return 0
     return len(response.json())
 
@@ -67,6 +70,9 @@ def get_pull_requests(repo_full_name, month):
     response = requests.get(pr_url, headers=HEADERS)
     if response.status_code != 200:
         print(response.status_code)
+        if response.status_code == 500:
+            print(f"Retrying get_pull_requests for month {month}...")
+            return get_pull_requests(repo_full_name, month)
         return 0
     data = response.json()
     return data["total_count"]
@@ -83,6 +89,9 @@ def get_issues_resolved(repo_full_name, month):
     response = requests.get(issue_url, headers=HEADERS)
     if response.status_code != 200:
         print(response.status_code)
+        if response.status_code == 500:
+            print(f"Retrying get_issues_resolved for month {month}...")
+            return get_issues_resolved(repo_full_name, month)
         return 0
     data = response.json()
     return data["total_count"]
@@ -92,6 +101,9 @@ def get_milestones_completed(repo_full_name, month):
     response = requests.get(milestones_url, headers=HEADERS)
     if response.status_code != 200:
         print(response.status_code)
+        if response.status_code == 500:
+            print(f"Retrying get_milestones_completed for month {month}...")
+            return get_milestones_completed(repo_full_name, month)
         return 0
 
     milestones = response.json()
@@ -108,6 +120,9 @@ def get_code_churn(repo_full_name, month):
     response = requests.get(commit_url, headers=HEADERS)
     if response.status_code != 200:
         print(response.status_code)
+        if response.status_code == 500:
+            print(f"Retrying get_code_churn for month {month}...")
+            return get_code_churn(repo_full_name, month)
         return 0, 0
 
     lines_added, lines_removed = 0, 0
@@ -118,6 +133,8 @@ def get_code_churn(repo_full_name, month):
         commit_response = requests.get(commit_url, headers=HEADERS)
         if commit_response.status_code != 200:
             print(commit_response.status_code)
+            print("Continuing...")
+            continue
         commit_details = commit_response.json()
         if "stats" in commit_details:
             date = commit_details["commit"]["author"]["date"][:7] 
@@ -134,6 +151,9 @@ def get_mails_per_month(repo_full_name, month):
     response = requests.get(comments_url, headers=HEADERS)
     if response.status_code != 200:
         print(response.status_code)
+        if response.status_code == 500:
+            print(f"Retrying get_mails_per_month for month {month}...")
+            return get_mails_per_month(repo_full_name, month)
         return 0
 
     comments = response.json()
